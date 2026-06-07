@@ -177,6 +177,12 @@
       <div class="nav-label">Business</div>
       <div class="nav-item" data-view="reports">Reports</div>
     </div>
+    <div class="nav-section">
+      <div class="nav-label">Shared Engine</div>
+      <div class="nav-item" data-view="tax">Tax &amp; Compliance</div>
+      <div class="nav-item" data-view="docs">Documents</div>
+      <div class="nav-item" data-view="financing">Buyer Financing</div>
+    </div>
   </aside>
 
   <main>
@@ -345,6 +351,68 @@
     <div class="view" id="view-returns"><div class="page-header"><div><div class="page-subtitle">3 active returns · 1.2% return rate (good)</div><div class="page-title">Returns</div></div></div><div class="coming-soon"><h3>Returns Processing</h3><p>RMA → inspect → restock or scrap → refund. Track patterns by SKU/listing.</p><ul><li>RMA generation with return label</li><li>Inspection workflow (restock vs scrap)</li><li>Auto-refund processing</li><li>Per-listing return-rate analytics</li><li>Photo evidence chain</li></ul></div></div>
     <div class="view" id="view-customers"><div class="page-header"><div><div class="page-subtitle">12,840 lifetime · 247 repeat buyers</div><div class="page-title">Customers</div></div></div><div class="coming-soon"><h3>Customer Database</h3><p>Repeat buyer tracking, B2B rebuilder accounts, local pickup regulars.</p><ul><li>Lifetime value per customer</li><li>B2B account flagging (rebuilders, body shops)</li><li>Local pickup regulars</li><li>Repeat purchase patterns</li></ul></div></div>
     <div class="view" id="view-reports"><div class="page-header"><div><div class="page-subtitle">Monthly · per-vehicle profit · channel mix</div><div class="page-title">Reports</div></div></div><div class="coming-soon"><h3>Business Reports</h3><p>Numbers that matter for an auto parts operator.</p><ul><li>Revenue by channel (eBay vs AMZN vs FB vs own)</li><li>Margin per vehicle parted out</li><li>SKU velocity (fast-movers vs slow)</li><li>Photo-desk productivity (photos/hour, $/photo)</li><li>Aged inventory write-down recommendations</li></ul></div></div>
+
+    <!-- ===== Cross-pollinated from Audit Practice cockpit ===== -->
+    <div class="view" id="view-tax">
+      <div class="page-header"><div><div class="page-subtitle">Multi-state marketplace tax · 1099 vendors · MV salvage compliance · use tax</div><div class="page-title">Tax &amp; Compliance</div></div></div>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; color: var(--text-mute); text-transform: uppercase; margin-bottom: 20px;">↘ Shared engine — sourced from the Audit Practice cockpit · auto-parts flavored: marketplace facilitator tax (eBay/Amazon collect), motor-vehicle salvage compliance, scrap-metal reporting</p>
+      <div class="stat-grid">
+        <div class="stat"><div class="stat-label">eBay-collected Tax</div><div class="stat-value">$14,820</div><div class="stat-delta">Marketplace handles · auto-reconciled</div></div>
+        <div class="stat"><div class="stat-label">Amazon-collected Tax</div><div class="stat-value">$8,440</div><div class="stat-delta">Marketplace handles · auto-reconciled</div></div>
+        <div class="stat"><div class="stat-label">Own-Store Tax Due</div><div class="stat-value">$3,200</div><div class="stat-delta">Direct sales · we file</div></div>
+        <div class="stat"><div class="stat-label">Scrap Reports</div><div class="stat-value">4</div><div class="stat-delta">Q2 metal-recycling filings</div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Tax authority — by source</div></div>
+        <table class="table">
+          <thead><tr><th>Channel</th><th>Sales</th><th>Tax Status</th><th>Who Files</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>eBay Motors</strong></td><td>$148,200</td><td>Marketplace facilitator</td><td>eBay (all states)</td><td><span class="tag emerald">Auto-handled</span></td></tr>
+            <tr><td><strong>Amazon Auto</strong></td><td>$84,400</td><td>Marketplace facilitator</td><td>Amazon (all states)</td><td><span class="tag emerald">Auto-handled</span></td></tr>
+            <tr><td><strong>FB Marketplace</strong></td><td>$22,400</td><td>FB collects in some states</td><td>Mixed · split per state</td><td><span class="tag gold">Per-state check</span></td></tr>
+            <tr><td><strong>Own webstore (PA only)</strong></td><td>$28,800</td><td>We collect + file</td><td>Us</td><td><span class="tag emerald">PA filing prep</span></td></tr>
+            <tr><td><strong>Local pickup (PA)</strong></td><td>$18,400</td><td>We collect + file</td><td>Us</td><td><span class="tag emerald">PA filing prep</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== Cross-pollinated from Audit Practice cockpit ===== -->
+    <div class="view" id="view-docs">
+      <div class="page-header"><div><div class="page-subtitle">Titles · salvage paperwork · scale-receipt records · customer paperwork</div><div class="page-title">Documents</div></div></div>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; color: var(--text-mute); text-transform: uppercase; margin-bottom: 20px;">↘ Shared engine — sourced from the Audit Practice cockpit · auto-parts flavored: vehicle titles, salvage certificates, scale receipts, scrap metal reporting</p>
+      <div class="panel" style="padding:0;">
+        <table class="table">
+          <thead><tr><th>Document</th><th>Type</th><th>Linked to</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Title-2018-F150-1FTFW.pdf</strong></td><td>Vehicle title</td><td>2018 F-150 (intake)</td><td><span class="tag emerald">Filed · OCR'd</span></td></tr>
+            <tr><td><strong>Salvage-Cert-Copart-2025881.pdf</strong></td><td>Salvage cert</td><td>2014 Camry</td><td><span class="tag emerald">Filed</span></td></tr>
+            <tr><td><strong>Scale-Receipt-MetalCo-0421.pdf</strong></td><td>Scrap weight ticket</td><td>April scrap-out</td><td><span class="tag emerald">Reconciled · $4,200</span></td></tr>
+            <tr><td><strong>Insurance-Garage-Liability.pdf</strong></td><td>Garage liability</td><td>Business · annual</td><td><span class="tag gold">Renews Sep</span></td></tr>
+            <tr><td><strong>EPA-Refrigerant-Cert.pdf</strong></td><td>EPA cert · A/C reclaim</td><td>Recovery program</td><td><span class="tag emerald">Active</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== Cross-pollinated from Furniture cockpit ===== -->
+    <div class="view" id="view-financing">
+      <div class="page-header"><div><div class="page-subtitle">Buyer financing for big-ticket parts · engines, transmissions, complete assemblies</div><div class="page-title">Buyer Financing</div></div></div>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; color: var(--text-mute); text-transform: uppercase; margin-bottom: 20px;">↘ Shared engine — sourced from the Furniture cockpit · auto-parts flavored: for parts &gt; $1,000 (engines, transmissions, full bumper assemblies, wheel sets) where buyer wants to spread payments</p>
+      <div class="panel">
+        <div class="panel-header"><div class="panel-title">Active financed orders</div></div>
+        <table class="table">
+          <thead><tr><th>Order</th><th>Item</th><th>Amount</th><th>Lender</th><th>Term</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><strong>EB-887399</strong></td><td>Transmission · '14 Camry</td><td>$2,400</td><td>Affirm</td><td>6 mo</td><td><span class="tag emerald">Approved</span></td></tr>
+            <tr><td><strong>EB-887412</strong></td><td>Engine · '11 RAM 1500 5.7 hemi</td><td>$3,800</td><td>Affirm</td><td>12 mo</td><td><span class="tag emerald">Approved</span></td></tr>
+            <tr><td><strong>FB-220988</strong></td><td>Wheel set + tires '15 Mustang</td><td>$1,840</td><td>PayPal Credit</td><td>6 mo</td><td><span class="tag emerald">Approved</span></td></tr>
+            <tr><td><strong>EB-887388</strong></td><td>Complete front clip · '20 Silverado</td><td>$5,200</td><td>Synchrony</td><td>18 mo</td><td><span class="tag amber">Pending</span></td></tr>
+          </tbody>
+        </table>
+        <p style="font-size: 11px; color: var(--text-mute); line-height: 1.6; margin-top: 14px;">~22% of orders over $1,000 use financing. Closes deals that otherwise would have walked. Average cart size increases 40% when financing is offered at checkout.</p>
+      </div>
+    </div>
 
   </main>
 </div>
